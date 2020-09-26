@@ -42,5 +42,113 @@ img
 	max-width: 100%
 	height: auto
 
+a
+	text-decoration: none
+	color: $text
+
+ul
+	list-style-type: none
+	margin: 0
+	padding: 0
+h1, h2, h3, h4, h5, h6
+	margin: 0
+.wrapper
+	+wrapper()
+
+.header
+	&__nav-list
+		display: flex
+		border-bottom: 1px solid $accent
+	&__nav-item
+		flex-grow: 1
+		text-align: center
+		a
+			line-height: 88px
+			color: $accent
+			font-size: 18px
+			display: block
+			&:hover
+				color: $text
+	&__main
+		display: flex
+		justify-content: space-between
+		align-items: end
+	&__title
+		font-weight: bold
+		font-size: 48px
+		margin-top: 40px
+	&__description
+		margin-top: auto
+	&__img
+		width: 100%
+		margin-bottom: 100px
+
+.section
+	background-color: $section-color
+	padding: 100px 0
+	&__content
+		max-width: 500px
+		margin: auto
+		text-align: center
+	&__title
+		font-size: 34px
+		font-weight: bold
+		text-align: center
+	&__text
+		font-size: 18px
+		text-align: center
+
+.second-section
+	background-color: #ffffff
+	.skill-list
+		+row-flex()
+		margin-top: 80px
+		&__item
+			+col()
+			+size(3)
+			text-align: center
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+		&__title
+			font-size: 14px
+			font-weight: bold
+			color: $accent
+			margin: 15px auto 40px
+			word-spacing: 1000px
+		&__stars
+			position: relative
+			bottom: 0
+
+.third-section
+	.section
+		&__item
+			text-align: center
+		&__img
+			width: 100%
+			margin: 40px 0
+		&__description
+			margin-bottom: 100px
+			&:last-child
+				margin-bottom: 0
+
+.button
+	font-size: 18px
+	font-weight: bold
+	cursor: pointer
+	padding: 15px 45px
+	color: #ffffff
+	background-color: #000000
+	border-radius: 50px
+	display: inline-block
+
+
+.footer
+	background-color: #ffffff
+	.section
+		&__social
+			display: flex
+			justify-content: space-around
+			margin: 80px 0 45px
 
 @import "media" // Always at the end
